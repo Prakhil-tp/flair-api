@@ -1,0 +1,35 @@
+{
+  "name": "flair-api",
+  "version": "1.0.0",
+  "description": "content recommending system",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log,./package-lock.json --copy-files",
+    "es6": "npm run build && node dist/index.js ",
+    "start": "nodemon --exec npm run es6 --ignore dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prakhil-tp/flair-api.git"
+  },
+  "author": "Prakhil Nijinsha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prakhil-tp/flair-api/issues"
+  },
+  "homepage": "https://github.com/Prakhil-tp/flair-api#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.16.3",
+    "joi": "^13.6.0",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "^5.2.17"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.4",
+    "rimraf": "^2.6.2"
+  }
+}
